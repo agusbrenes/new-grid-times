@@ -32,10 +32,10 @@ const Header = () => {
 				<MainHeaderWrapper>
 					<HeaderLeftOptions>
 						<button>
-							<Search size={24} stroke={COLORS.gray[900]} />
+							<Search size={24} />
 						</button>
 						<button>
-							<Menu size={24} stroke={COLORS.gray[900]} />
+							<Menu size={24} />
 						</button>
 					</HeaderLeftOptions>
 					<MainLogo />
@@ -60,7 +60,7 @@ const SuperHeader = styled.div`
 	background: var(--color-gray-900);
 	color: white;
 
-	@media ${QUERIES.desktopAndUp} {
+	@media ${QUERIES.laptopAndUp} {
 		display: none;
 	}
 `;
@@ -90,7 +90,7 @@ const MainHeaderWrapper = styled.div`
 	justify-content: center;
 	width: fit-content;
 
-	@media ${QUERIES.desktopAndUp} {
+	@media ${QUERIES.laptopAndUp} {
 		width: 100%;
 	}
 `;
@@ -98,7 +98,7 @@ const MainHeaderWrapper = styled.div`
 const HeaderLeftOptions = styled(ActionGroup)`
 	display: none;
 
-	@media ${QUERIES.desktopAndUp} {
+	@media ${QUERIES.laptopAndUp} {
 		position: absolute;
 		left: 0;
 		display: flex;
@@ -108,7 +108,7 @@ const HeaderLeftOptions = styled(ActionGroup)`
 const HeaderRightOptions = styled.div`
 	display: none;
 
-	@media ${QUERIES.desktopAndUp} {
+	@media ${QUERIES.laptopAndUp} {
 		position: absolute;
 		right: 0;
 		bottom: 0;
@@ -139,7 +139,7 @@ const MainHeader = styled(MaxWidthWrapper)`
 		margin-bottom: 72px;
 	}
 
-	@media ${QUERIES.desktopAndUp} {
+	@media ${QUERIES.laptopAndUp} {
 		margin-top: 16px;
 	}
 `;
