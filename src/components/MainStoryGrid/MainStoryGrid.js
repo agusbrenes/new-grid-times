@@ -69,16 +69,13 @@ const StoryList = styled.div`
 `;
 
 const StoryWrapper = styled.div`
+	--story-spacing: 16px;
 	background-color: var(--color-gray-100);
-
-	&:not(:first-of-type) {
-		border-top: 1px solid var(--color-gray-300);
-		padding-top: 16px;
-	}
 
 	&:not(:last-of-type) {
 		border-bottom: 1px solid var(--color-gray-300);
-		padding-bottom: 16px;
+		padding-bottom: var(--story-spacing);
+		margin-bottom: var(--story-spacing);
 	}
 `;
 
