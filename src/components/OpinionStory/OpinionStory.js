@@ -24,13 +24,13 @@ const Wrapper = styled.article`
 	gap: 32px;
 	color: var(--color-gray-900);
 
-	@media ${QUERIES.tabletOnly} {
+	@media ${QUERIES.tabletAndUp} {
 		flex-direction: column;
-		align-items: flex-start;
 		gap: 8px;
 	}
 
 	@media ${QUERIES.laptopAndUp} {
+		flex-direction: row-reverse;
 		gap: 16px;
 	}
 `;
