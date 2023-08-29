@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components/macro";
 import { Menu, Search, User } from "react-feather";
 
-import { COLORS, QUERIES } from "../../constants";
+import { QUERIES } from "../../constants";
 
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import Logo from "../Logo";
@@ -121,7 +121,7 @@ const HeaderRightOptions = styled.div`
 
 const SubscriberButton = styled.button`
 	background: none;
-	color: ${COLORS.gray[900]};
+	color: var(--color-gray-900);
 	font-size: ${14 / 16}rem;
 	font-style: italic;
 	text-decoration: underline;
