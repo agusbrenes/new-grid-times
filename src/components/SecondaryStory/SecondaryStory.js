@@ -29,8 +29,7 @@ const Wrapper = styled.article`
 			"heading"
 			"abstract";
 		gap: 0;
-		grid-template-rows: 120px fit-content 1fr;
-		grid-template-columns: revert;
+		grid-template-columns: 1fr;
 	}
 `;
 
