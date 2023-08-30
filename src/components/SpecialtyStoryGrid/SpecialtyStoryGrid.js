@@ -52,31 +52,40 @@ const SpecialtyStoryGrid = () => {
 };
 
 const Wrapper = styled.div`
+	--spacing: 16px;
+	--sports-story-width: 13.75rem;
+
 	display: grid;
 	gap: 48px;
+
+	@media ${QUERIES.laptopAndUp} {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1px;
+		background-color: var(--color-gray-300);
+	}
 `;
 
-const MarketsSection = styled.section``;
+const MarketsSection = styled.section`
+	@media ${QUERIES.laptopAndUp} {
+		padding-right: var(--spacing);
+		background-color: var(--color-gray-100);
+	}
+`;
 
 const MarketCards = styled.div`
 	display: grid;
-	//! Fluid Approach
-	grid-template-columns: repeat(auto-fill, minmax(min(11rem, 100%), 1fr));
 	gap: 1rem;
 
-	//! Responsive Approach
-	/* grid-template-columns: repeat(2, 1fr);
-
-	@media ${QUERIES.tabletAndUp} {
-		grid-template-columns: repeat(4, 1fr);
-	}
-
-	@media ${QUERIES.laptopAndUp} {
-		grid-template-columns: repeat(3, 1fr);
-	} */
+	//! Fluid Approach
+	grid-template-columns: repeat(auto-fill, minmax(min(11rem, 100%), 1fr));
 `;
 
-const SportsSection = styled.div``;
+const SportsSection = styled.div`
+	@media ${QUERIES.laptopAndUp} {
+		padding-left: var(--spacing);
+		background-color: var(--color-gray-100);
+	}
+`;
 
 const SportsStoriesGrid = styled.div`
 	display: grid;
@@ -89,8 +98,9 @@ const SportsStoriesWrapper = styled.div`
 
 const SportsStories = styled.div`
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
 	gap: 1rem;
+	//! Fluid Approach
+	grid-template-columns: repeat(auto-fill, minmax(min(var(--sports-story-width), 100%), 1fr));
 
 	@media ${QUERIES.tabletAndUp} {
 		grid-auto-flow: column;
@@ -102,7 +112,7 @@ const MiniStoryWrapper = styled.div`
 	width: 100%;
 
 	@media ${QUERIES.tabletAndUp} {
-		width: 13.75rem;
+		width: var(--sports-story-width);
 	}
 `;
 
